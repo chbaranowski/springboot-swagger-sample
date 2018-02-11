@@ -1,0 +1,74 @@
+swagger: '2.0'
+info:
+  version: 0.1.0
+  title: 'Sample REST API'
+  description: 'Simple REST API to ingest and query data'
+  license:
+    name: 'MIT'
+    url: 'http://opensource.org/licenses/MIT'
+
+tags:
+- name: Data
+  description: "Everything about Data."
+
+###    
+# REST API definition (paths)
+##
+paths:
+  /data/{source}:
+    get:
+      summary: 'Get data from the resource.'
+      operationId: getData
+      tags:
+      - Data
+      produces:
+        - application/json
+      parameters: 
+        - name: source
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: 'Returns all data from the server.'
+          schema:
+            type: array
+            items: 
+              $ref: '#/definitions/DataRessource'
+        500:
+          description: 'Internal server error.'
+    post:
+      summary: 'add new data to the source'
+      operationId: postData
+      tags:
+      - Data
+      consumes: 
+        - application/json
+      parameters: 
+        - name: source
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          schema:
+            $ref: '#/definitions/DataRessource'
+      responses:
+        202:
+          description: 'Data insert into the database.'
+        500:
+          description: 'Internal server error.'
+
+##
+# API Model definitions
+##
+definitions:
+  DataRessource:
+    type: object
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      data:
+        type: object
