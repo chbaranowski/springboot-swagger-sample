@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/tux2323/springboot-swagger-sample.svg?branch=master)](https://travis-ci.org/tux2323/springboot-swagger-sample)
 
 
-The project contains a blueprint for a REST API server and client. REST API is defined via a swagger definition see `sample-api.yaml`. The REST server and client is generate by using the swagger code generator. 
+The project contains a simple Java REST API server and client. The API is defined with a swagger definition see [sample-api.yaml](https://github.com/tux2323/springboot-swagger-sample/blob/master/sample-api.yaml). The server and client is generate by using the [swagger code generator](https://github.com/swagger-api/swagger-codegen). The server is based on `Spring web MVC` and the client is based on `Netflix feign`.
 
 ## Build and Run the Demo (test case)
 
-To generate the server and client and to run the demo (test case) invoke:
+To generate the REST server and client and to run the demo (test case) invoke:
 
 	mvn clean install
 	
