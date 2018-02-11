@@ -4,8 +4,8 @@
 
 	<groupId>io.springboot.samples</groupId>
 	<artifactId>springboot-api-starter</artifactId>
-	<packaging>pom</packaging>
 	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

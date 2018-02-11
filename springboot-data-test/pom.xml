@@ -8,7 +8,6 @@
 		<version>0.1.0-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-
 	<artifactId>springboot-data-test</artifactId>
 
 	<dependencies>
@@ -16,13 +15,11 @@
 			<groupId>io.springboot.samples</groupId>
 			<artifactId>springboot-data-server</artifactId>
 			<version>${project.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.springboot.samples</groupId>
 			<artifactId>springboot-data-client</artifactId>
 			<version>${project.version}</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
